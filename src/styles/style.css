@@ -12,7 +12,11 @@
 body {
   background-color: var(--backgroundColor);
   color: var(--textColor);
-  margin: 30px;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 h1,
@@ -30,5 +34,79 @@ p {
 }
 
 .h1_hele {
-  transform: rotate(90deg);
+  transform: rotate(270deg);
+  position: relative;
+  right: 4%;
+  top: 8rem;
+  font-size: 3rem;
+}
+
+.box2 {
+  position: relative;
+  border: 3px solid #4e14c8;
+}
+
+.box2::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url("/img/forside2.jpg");
+  opacity: 0.3; /* Juster gennemsigtigheden efter behov */
+  z-index: -1; /* Placer pseudo-elementet bag alt andet indhold */
+}
+
+.box3 {
+  position: relative;
+  border: 3px solid #4e14c8;
+}
+
+.box3::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url("/img/forside4.png");
+  opacity: 0.3; /* Juster gennemsigtigheden efter behov */
+  z-index: -1; /* Placer pseudo-elementet bag alt andet indhold */
+}
+
+.textbox {
+  position: relative; /* Sørg for at teksten forbliver oven på baggrundsbilledet */
+  z-index: 1; /* Placer teksten over baggrundsbilledet */
+  line-height: 2rem;
+  top: 2rem;
+  left: 3rem;
+}
+.textbox h1 {
+  line-height: 5rem;
+}
+
+.img_container img {
+  object-fit: cover;
+
+  float: right;
+  margin: 0;
+}
+.img_container {
+  height: 70%;
+  width: 100%;
+}
+.h1_info img {
+  position: relative;
+  width: 10rem;
+  left: 10rem;
+}
+
+.festival_h2 {
+  color: #29e154;
+}
+
+.h2-vertical {
+  font-size: 3rem;
+  text-align: center;
+}
+.h3-vertical {
+  font-size: 4rem;
+  text-align: center;
 }
