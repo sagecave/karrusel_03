@@ -16,10 +16,19 @@ body {
 }
 
 h1,
-h2 {
+h2,
+h3 {
   font-family: "urbanist";
+}
+
+h2 {
+  color: #29e154;
 }
 
 p {
   font-family: "urbanist";
+}
+
+.h1_hele {
+  transform: rotate(90deg);
 }
