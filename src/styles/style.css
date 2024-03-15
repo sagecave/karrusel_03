@@ -78,13 +78,23 @@ p {
   top: 2rem;
   left: 3rem;
 }
+
+.textbox2 {
+  position: relative; /* Sørg for at teksten forbliver oven på baggrundsbilledet */
+  z-index: 1; /* Placer teksten over baggrundsbilledet */
+  line-height: 2rem;
+  top: 0.5rem;
+  left: 55%;
+  max-width: 80%;
+  padding: 5%;
+}
+
 .textbox h1 {
   line-height: 5rem;
 }
 
 .img_container img {
   object-fit: cover;
-
   float: right;
   margin: 0;
 }
