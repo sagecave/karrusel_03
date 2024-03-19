@@ -1,0 +1,55 @@
+---
+import "../styles/map.css";
+import "../styles/style.css";
+import "../styles/layout.css";
+import Knap from "../komponenter/Knap.astro";
+import Navigation from "../komponenter/Navigation.astro";
+import Footer from "../komponenter/Footer.astro";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>KARRUSEL</title>
+  </head>
+  <body>
+    <header>
+      <Navigation/> 
+    </header> 
+    <main>
+        <h1>GET AROUND</h1>
+        <h2>Filtre</h2>
+        <section class="grid_1-1">
+            <div class="filtre">
+                <div class="filter">
+                    <h3>Days</h3>
+                    <label for="filter1"><input type="checkbox" id="filter1" name="filter1">THURSDAY</label>
+                    <label for="filter2"><input type="checkbox" id="filter2" name="filter2">FRIDAY</label>
+                    <label for="filter3"><input type="checkbox" id="filter3" name="filter3">SATURDAY</label>
+                </div>
+                <div class="filter">
+                    <h3>Stages</h3>
+                    <label for="filter1"><input type="checkbox" id="filter1" name="filter1">MANEGEN</label>
+                    <label for="filter2"><input type="checkbox" id="filter2" name="filter2">BALKEN</label>
+                    <label for="filter3"><input type="checkbox" id="filter3" name="filter3">TRIBUNEN</label>
+                </div>
+                <div class="filter">
+                    <h3>Category</h3>
+                    <label for="filter1"><input type="checkbox" id="filter1" name="filter1"> Techno</label>
+                    <label for="filter2"><input type="checkbox" id="filter2" name="filter2"> House</label>
+                    <label for="filter3"><input type="checkbox" id="filter3" name="filter3"> Disco</label>
+                </div>
+               <Knap text="Search"/>
+            </div>
+            <div>
+                <img src="img/map.png" alt="Kort over Karrusel Festival">
+                </div>
+            </div>
+        </section>
+    </main>
+    <Footer/> 
+  </body>
+</html>

@@ -1,0 +1,41 @@
+.about_1-3 {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    border: 3px solid #4E14C8;
+    width: 100%;
+    margin-bottom: 3rem;
+    gap:5px;
+}
+
+
+
+.about-1_1_1{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+}
+
+.Lineup_header{
+    font-family: "urbanist";
+    font-size: 80px;
+    color: #29e154;
+    text-align: center;
+    letter-spacing: 6px;
+  }
+
+.year_header{
+    font-family: "urbanist";
+    font-size: 40px;
+    color: white;
+    text-align: center;
+}
+
+.dato_header{
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 60px;
+    color:white;
+    letter-spacing: 14px; 
+    transform: rotate(90deg);
+    margin-top: 35rem;
+    position:flex;
+    width:160px
+}

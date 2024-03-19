@@ -1,0 +1,45 @@
+---
+import "../styles/productlist.css";
+import "../styles/style.css";
+import "../styles/layout.css";
+import Navigation from "../komponenter/Navigation.astro";
+import Cards from "../komponenter/Cards.astro";
+import Knap from "../komponenter/Knap.astro";
+import Footer from "../komponenter/Footer.astro";
+---
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Program</title>
+  </head>
+  <body>
+    <header>
+      <Navigation/> 
+    </header> 
+    <main>
+        <h1 class="Lineup_header">LINE-UP</h1>
+        <p class="year_header">2024</p>
+        <section class="about_1-3">
+            <div>
+                <h2 class="dato_header">22.08 THURSDAY</h2>
+                </div>
+                <div class="about_1-1-1">
+                    <div>
+                      <Cards/>  
+                    </div>
+                    <div>
+                      <Cards/>  
+                    </div>
+                    <div>
+                      <Cards/>  
+                    </div> 
+                </div>
+        </section>
+    </main>
+    <Footer/> 
+    </body>
+  </html>
+  

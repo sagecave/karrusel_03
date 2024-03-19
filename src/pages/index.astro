@@ -1,8 +1,10 @@
 ---
 import "../styles/style.css";
 import "../styles/layout.css";
+import Knap from "../komponenter/Knap.astro";
 import Index_card from "../komponenter/Index_card.astro";
 import Navigation from "../komponenter/Navigation.astro";
+import Footer from "../komponenter/Footer.astro";
 ---
 
 <html lang="en">
@@ -17,6 +19,7 @@ import Navigation from "../komponenter/Navigation.astro";
     <header>
       <Navigation/> 
     </header> 
+    <main>
     <div class="forside_s1 grid_1-3">
       <div class="alt_h1">
         <!-- logo -->
@@ -55,6 +58,7 @@ import Navigation from "../komponenter/Navigation.astro";
             Early Bird Festival Passes on sale until 1 April. <br /> The Festival Pass provides access to <br />all 3 days at Karrusel from 22 to 24 August 2024.<br /> Day tickets will go on sale later.
           </h3>
         </div>
+        <Knap text="Buy ticekts"/>
       </div>
     </div>
     <!-- kort skal placeres her -->
@@ -80,7 +84,10 @@ import Navigation from "../komponenter/Navigation.astro";
             2024 marks the 5th edition of Karrusel. <br /> Karrusel is a circus themed rave presenting <br />some of the world's leading electronic artists. <br /> Past editions include performances by <br /> Acid Pauli, Amelie Lens, Dixon, FJAAK.
           </h3>
         </div>
+        <Knap text="Read more"/>
       </div>
     </div>
+  </main>
+  <Footer/> 
   </body>
 </html>

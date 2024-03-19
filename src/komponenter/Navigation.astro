@@ -1,3 +1,8 @@
+---
+import Knap from "../komponenter/Knap.astro";
+---
+
+
 <header>
     <div class="logo">
         <a href="index.html"><img src="img/nav_logo.png" alt="logo"></a>
@@ -5,10 +10,10 @@
     <nav>
         <ul class="menu">
             <li><a href="#">Home</a></li>
-            <li><a href="#">Line up</a></li>
+            <li><a href="src/pages/singleview.astro">Line up</a></li>
             <li><a href="#">Map</a></li>
-            <li><a href="#">About us</a></li>
-            <li class="buy-tickets"><a href="#">Buy tickets</a></li>
+            <li><a href="src/pages/about_us.astro">About us</a></li>
+            <li><Knap text="Buy tickets"/></li>
         </div>
         </ul>
         <div class="burger">
@@ -22,6 +27,7 @@
 <style>
     .menu {
     display: flex;
+   
     list-style: none;
     margin: 0;
     padding: 0;
@@ -42,6 +48,7 @@
     text-decoration: none;
     transition: color 0.3s;
     text-align: center;
+    font-family: "urbanist";
     }
           
 .menu a:hover {
