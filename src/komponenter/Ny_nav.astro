@@ -1,5 +1,5 @@
 ---
-import Knap from "../komponenter/Knap.astro";
+import Ny_nav_knap from "../komponenter/Ny_nav_knap.astro";
 ---
 
 
@@ -13,7 +13,9 @@ import Knap from "../komponenter/Knap.astro";
             <li><a href="src/pages/singleview.astro">Line up</a></li>
             <li><a href="src/pages/map.astro">Map</a></li>
             <li><a href="src/pages/about_us.astro">About us</a></li>
-            <li><Knap text="Buy tickets"/></li>
+            <div class="btn">
+            <li><Ny_nav_knap text="Buy tickets"/></li>
+        </div>
         </div>
         </ul>
         <div class="burger">
@@ -48,8 +50,8 @@ import Knap from "../komponenter/Knap.astro";
     text-decoration: none;
     transition: color 0.3s;
     text-align: center;
-    margin-top: 10px;
-    margin-right: 45px;
+    margin-top: -7rem;
+    margin-right: 80px;
     font-family: "urbanist";
     z-index: 11;
     }
@@ -127,21 +129,21 @@ nav {
     align-items: center;
     }
 
-.logo{
-    padding: 30px 10px;
-    margin: 0.5rem;
+.logo img{
+    margin-top: 5rem;
+    margin-left: 12rem;
     margin-bottom: 1.3rem;
-    width: 8rem;
+    width: 10rem;
     z-index: 2;
     background-color: transparent;
 }
 
-.buy-tickets {
+li button{
     background-image: linear-gradient(45deg, #68DA23, #E9F4E2);
     border-radius: 10px;
     z-index: 10; 
     display: block;
-    padding: 31px;
+    padding: 30px;
     color: white;
     text-decoration: none;
     transition: color 0.3s;

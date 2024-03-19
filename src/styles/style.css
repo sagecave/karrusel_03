@@ -38,9 +38,11 @@ p {
   position: relative;
   right: 4%;
   top: 8rem;
-  font-size: 3rem;
-  margin-top: 15px;
+  font-size: 3.5rem;
+  margin-left: 15rem;
+  margin-top: 400px;
   letter-spacing: 15px;
+  width: 60px;
 }
 
 .box2 {
@@ -101,6 +103,8 @@ p {
   margin: 0;
 }
 .img_container {
+  margin-top: -13rem;
+  margin-right: -4rem;
   height: 70%;
   width: 100%;
 }
@@ -115,15 +119,25 @@ p {
 }
 
 .h2-vertical {
+  margin-top: 1rem;
+  margin-left: 10rem;
   font-size: 3rem;
   text-align: center;
 }
 .h3-vertical {
-  font-size: 4rem;
+  font-size: 5rem;
   text-align: center;
+  margin-top: 1rem;
+  margin-left: 10rem;
 }
 
 .tickets{
   margin-top: 1rem;
   margin:3rem;
+}
+
+.tickets_read{
+  margin-top: -1rem;
+  margin-left:53.5rem;
+  margin-bottom: 2rem;
 }
