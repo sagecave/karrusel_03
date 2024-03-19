@@ -1,0 +1,139 @@
+<header>
+    <div class="logo">
+        <a href="index.html"><img src="img/nav_logo.png" alt="logo"></a>
+    </div>
+    <nav>
+        <ul class="menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Line up</a></li>
+            <li><a href="#">Map</a></li>
+            <li><a href="#">About us</a></li>
+            <li class="buy-tickets"><a href="#">Buy tickets</a></li>
+        </div>
+        </ul>
+        <div class="burger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+    </nav>
+</header>
+
+<style>
+    .menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    }
+          
+.menu li {
+    margin-right: 5px;
+    }
+          
+.menu li:last-child {
+    margin-right: 0;
+    }
+          
+.menu a {
+    display: block;
+    padding: 46px;
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+    text-align: center;
+    }
+          
+.menu a:hover {
+    color: white;
+        }
+          
+.burger {
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+    }
+          
+.burger .line {
+    width: 100%;
+    height: 2px;
+    background-color: #333;
+    margin-bottom: 5px;
+    transition: 0.2s linear;
+    }
+.burger {
+    display: none;
+        }
+@media screen and (max-width: 800px) {
+    .menu {
+    display: none;
+    }
+.burger {
+    display: block;
+    }
+.burger.active .line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+    transition: 0.2s linear;
+    }
+          
+.burger.active .line:nth-child(2) {
+    opacity: 0;
+    transition: 0.15s linear;
+    }
+          
+.burger.active .line:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+    transition: 0.2s linear;
+    }
+          
+nav.active .menu {
+    display: block;
+    background-color:#ECE6DB;
+    position:fixed;
+    top: 120px;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    }
+          
+nav.active .menu li {
+    margin: 10px 20px;
+        }
+          
+nav.active .menu a {
+    font-size: 16px;
+        }
+    }
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items:end;
+    margin-top: -25px;
+    z-index: 4;
+    }
+          
+nav {
+    display: flex;
+    align-items: center;
+    }
+
+.logo{
+    padding: 30px 10px;
+    margin: 0.5rem;
+    margin-bottom: 0.5rem;
+    width: 8rem;
+    z-index: 2;
+    background-color: transparent;
+}
+
+.buy-tickets {
+    background-image: linear-gradient(45deg, #68DA23, #E9F4E2);
+    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    padding:1px 1px;
+    z-index: 10; 
+}
+</style>
