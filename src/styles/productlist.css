@@ -20,7 +20,7 @@
     font-size: 80px;
     color: #29e154;
     text-align: center;
-    letter-spacing: 6px;
+    letter-spacing: 4px;
   }
 
 .year_header{
@@ -38,12 +38,12 @@
     font-family:"urbanist";
     font-size: 50px;
     color:white;
-    letter-spacing: 14px; 
+    letter-spacing: 20px; 
     transform: rotate(90deg);
     position:flex;
     width:160px;
     white-space: nowrap;
-    margin-top: 17rem;
+    margin-top: 15rem;
     margin-bottom: 5rem;
 }
 
@@ -51,11 +51,11 @@
     font-family:"urbanist";
     font-size: 50px;
     color:#29e154;
-    letter-spacing: 14px; 
+    letter-spacing: 20px; 
     transform: rotate(90deg);
     position:flex;
     width:160px;
     white-space: nowrap;
-    margin-top: 17rem;
+    margin-top: 15rem;
     margin-bottom: 5rem;
 }
