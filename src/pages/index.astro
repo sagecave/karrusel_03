@@ -1,7 +1,7 @@
 ---
 import "../styles/style.css";
 import "../styles/layout.css";
-import Knap from "../komponenter/Knap.astro";
+import Knap_product from "../komponenter/Knap_product.astro";
 import Index_card from "../komponenter/Index_card.astro";
 import Navigation from "../komponenter/Navigation.astro";
 import Footer from "../komponenter/Footer.astro";
@@ -23,9 +23,9 @@ import Footer from "../komponenter/Footer.astro";
       <div class="forside_s1 grid_1-3">
         <div class="alt_h1">
           <!-- logo -->
-          <div class="h1_info">
-            <img src="/img/logo.svg" alt="Logo" />
-          </div>
+          <!-- <div class="h1_info">
+          <img src="/img/logo.svg" alt="Logo" />
+        </div> -->
 
           <!-- H1 -->
           <div class="samlet_h1 col_column">
@@ -62,19 +62,19 @@ import Footer from "../komponenter/Footer.astro";
           </div>
           <Knap text="Buy ticekts" />
         </div>
+        <div class="tickets">
+          <Knap_product text="Buy ticekts" />
+        </div>
       </div>
-      <!-- kort skal placeres her -->
-      <div class="box2">
-        <div class="grid-1_1_1">
-          <div class="textbox">
-            <Index_card />
-          </div>
-          <div class="textbox">
-            <Index_card />
-          </div>
-          <div class="textbox">
-            <Index_card />
-          </div>
+    </main>
+    <!-- kort skal placeres her -->
+    <div class="box2">
+      <div class="grid-1_1_1">
+        <div class="textbox">
+          <Index_card />
+        </div>
+        <div class="textbox">
+          <Index_card />
         </div>
       </div>
       <!-- about us infor box-->
@@ -91,8 +91,9 @@ import Footer from "../komponenter/Footer.astro";
           </div>
           <Knap text="Read more" />
         </div>
+        <Knap_product text="Read more" />
       </div>
-    </main>
+    </div>
     <Footer />
   </body>
 </html>

@@ -39,6 +39,8 @@ p {
   right: 4%;
   top: 8rem;
   font-size: 3rem;
+  margin-top: 15px;
+  letter-spacing: 15px;
 }
 
 .box2 {
@@ -119,4 +121,9 @@ p {
 .h3-vertical {
   font-size: 4rem;
   text-align: center;
+}
+
+.tickets{
+  margin-top: 1rem;
+  margin:3rem;
 }

@@ -1,5 +1,5 @@
 ---
-import Knap from "../komponenter/Knap.astro";
+import Knap_product from "../komponenter/Knap_product.astro";
 
 const { data } = Astro.props;
 console.log(data);
@@ -27,152 +27,152 @@ console.log(data);
       <Knap text="Read more" />
     </div>
   </div>
+
+  <style>
+    article {
+      margin: 0;
+      padding: 0;
+      width: 322px;
+      height: fit-content;
+    }
+
+    .green-box {
+      position: relative;
+      background-color: #29e154;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Oxygen,
+        Ubuntu,
+        Cantarell,
+        "Open Sans",
+        "Helvetica Neue",
+        sans-serif;
+      color: white;
+      width: 370px;
+      margin-left: 6.8rem;
+      transform: rotate(90deg);
+      top: 14.979rem;
+    }
+
+    .card {
+      width: 246px;
+      background-color: #fff;
+      position: relative;
+      flex-direction: column;
+      color: black;
+      height: 370px;
+      top: 0.3rem;
+    }
+
+    .card img {
+      position: relative;
+      right: 0.06rem;
+      widows: 100%;
+    }
+
+    .card-image {
+      width: 100%;
+      height: auto;
+      display: relative;
+      flex-direction: row;
+      position: relative;
+    }
+
+    .card-content {
+      flex: 1;
+      position: relative;
+      bottom: 1.1rem;
+      left: 0.2rem;
+    }
+
+    .info {
+      margin-top: 1.3rem;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Oxygen,
+        Ubuntu,
+        Cantarell,
+        "Open Sans",
+        "Helvetica Neue",
+        sans-serif;
+      display: flex;
+      color: black;
+    }
+
+    .info p {
+      padding-left: 0.8rem;
+      font-size: 12px;
+    }
+
+    .card-description {
+      margin-top: 0.5rem;
+      margin-bottom: 0.5rem;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Oxygen,
+        Ubuntu,
+        Cantarell,
+        "Open Sans",
+        "Helvetica Neue",
+        sans-serif;
+      font-size: 11px;
+      padding: 0.2rem;
+      width: 250px;
+
+      line-height: 1.5;
+      color: black;
+    }
+
+    .card-genre {
+      padding: 0.5rem;
+      margin: 0rem;
+      font-size: 14px;
+      position: relative;
+      left: 1.2rem;
+      color: white;
+    }
+
+    .card-title {
+      font-size: 50px;
+      font-weight: bold;
+      position: relative;
+      left: 1.5rem;
+      margin: 0rem;
+      color: white;
+      top: 0.5rem;
+    }
+
+    .card-link {
+      background-image: linear-gradient(45deg, #68da23, #e9f4e2);
+      color: white;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Oxygen,
+        Ubuntu,
+        Cantarell,
+        "Open Sans",
+        "Helvetica Neue",
+        sans-serif;
+      font-size: 14px;
+      border-radius: 15px;
+      text-decoration: none;
+      padding: 0.6rem 30px;
+    }
+  </style>
 </article>
-
-<style>
-  article {
-    margin: 0;
-    padding: 0;
-    width: 322px;
-    height: fit-content;
-  }
-
-  .green-box {
-    position: relative;
-    background-color: #29e154;
-    font-family:
-      system-ui,
-      -apple-system,
-      BlinkMacSystemFont,
-      "Segoe UI",
-      Roboto,
-      Oxygen,
-      Ubuntu,
-      Cantarell,
-      "Open Sans",
-      "Helvetica Neue",
-      sans-serif;
-    color: white;
-    width: 370px;
-    margin-left: 6.8rem;
-    transform: rotate(90deg);
-    top: 14.979rem;
-  }
-
-  .card {
-    width: 246px;
-    background-color: #fff;
-    position: relative;
-    flex-direction: column;
-    color: black;
-    height: 370px;
-    top: 0.3rem;
-  }
-
-  .card img {
-    position: relative;
-    right: 0.06rem;
-    widows: 100%;
-  }
-
-  .card-image {
-    width: 100%;
-    height: auto;
-    display: relative;
-    flex-direction: row;
-    position: relative;
-  }
-
-  .card-content {
-    flex: 1;
-    position: relative;
-    bottom: 1.1rem;
-    left: 0.2rem;
-  }
-
-  .info {
-    margin-top: 1.3rem;
-    font-family:
-      system-ui,
-      -apple-system,
-      BlinkMacSystemFont,
-      "Segoe UI",
-      Roboto,
-      Oxygen,
-      Ubuntu,
-      Cantarell,
-      "Open Sans",
-      "Helvetica Neue",
-      sans-serif;
-    display: flex;
-    color: black;
-  }
-
-  .info p {
-    padding-left: 0.8rem;
-    font-size: 12px;
-  }
-
-  .card-description {
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
-    font-family:
-      system-ui,
-      -apple-system,
-      BlinkMacSystemFont,
-      "Segoe UI",
-      Roboto,
-      Oxygen,
-      Ubuntu,
-      Cantarell,
-      "Open Sans",
-      "Helvetica Neue",
-      sans-serif;
-    font-size: 11px;
-    padding: 0.2rem;
-    width: 250px;
-
-    line-height: 1.5;
-    color: black;
-  }
-
-  .card-genre {
-    padding: 0.5rem;
-    margin: 0rem;
-    font-size: 14px;
-    position: relative;
-    left: 1.2rem;
-    color: white;
-  }
-
-  .card-title {
-    font-size: 50px;
-    font-weight: bold;
-    position: relative;
-    left: 1.5rem;
-    margin: 0rem;
-    color: white;
-    top: 0.5rem;
-  }
-
-  .card-link {
-    background-image: linear-gradient(45deg, #68da23, #e9f4e2);
-    color: white;
-    font-family:
-      system-ui,
-      -apple-system,
-      BlinkMacSystemFont,
-      "Segoe UI",
-      Roboto,
-      Oxygen,
-      Ubuntu,
-      Cantarell,
-      "Open Sans",
-      "Helvetica Neue",
-      sans-serif;
-    font-size: 14px;
-    border-radius: 15px;
-    text-decoration: none;
-    padding: 0.6rem 30px;
-  }
-</style>
