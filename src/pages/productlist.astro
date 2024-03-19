@@ -6,7 +6,19 @@ import Navigation from "../komponenter/Navigation.astro";
 import Cards from "../komponenter/Cards.astro";
 import Knap from "../komponenter/Knap.astro";
 import Footer from "../komponenter/Footer.astro";
+
+const data = await fetch(
+  "https://pngxjlkcppmzocuoxmzp.supabase.co/rest/v1/line-up",
+  {
+    method: "GET",
+    headers: {
+      apikey:
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBuZ3hqbGtjcHBtem9jdW94bXpwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTA0OTAyMDcsImV4cCI6MjAyNjA2NjIwN30.h7sQ7sOC3JXIz9e23g78CYaklpU1I5WyjwVH35CV8FE",
+    },
+  }
+).then((res) => res.json());
 ---
+
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -17,87 +29,93 @@ import Footer from "../komponenter/Footer.astro";
   </head>
   <body>
     <header>
-      <Navigation/> 
-    </header> 
+      <Navigation />
+    </header>
     <main>
-        <h1 class="Lineup_header">LINE-UP <span class="year_header">2024</span></h1>
-        <section class="about_1-3">
-            <div>
-                <h2 class="dato_header">22.08 THURSDAY</h2>
-                </div>
-                <div class="about_1-1-1">
-                    <div>
-                      <Cards/>  
-                    </div>
-                    <div>
-                      <Cards/>  
-                    </div>
-                    <div>
-                      <Cards/>  
-                    </div> 
-                    <div>
-                        <Cards/>  
-                      </div>
-                      <div>
-                        <Cards/>  
-                      </div>
-                      <div>
-                        <Cards/>  
-                      </div> 
-                </div>
-        </section>
-        <section class="about_1-3">
-            <div>
-                <h2 class="dato_header_green">23.08 FRIDAY</h2>
-                </div>
-                <div class="about_1-1-1">
-                    <div>
-                      <Cards/>  
-                    </div>
-                    <div>
-                      <Cards/>  
-                    </div>
-                    <div>
-                      <Cards/>  
-                    </div> 
-                    <div>
-                        <Cards/>  
-                      </div>
-                      <div>
-                        <Cards/>  
-                      </div>
-                      <div>
-                        <Cards/>  
-                      </div> 
-                </div>
-        </section>
-        <section class="about_1-3">
-            <div>
-                <h2 class="dato_header">24.08 SATURDAY</h2>
-                </div>
-                <div class="about_1-1-1">
-                    <div>
-                      <Cards/>  
-                    </div>
-                    <div>
-                      <Cards/>  
-                    </div>
-                    <div>
-                      <Cards/>  
-                    </div> 
-                    <div>
-                        <Cards/>  
-                      </div>
-                      <div>
-                        <Cards/>  
-                      </div>
-                      <div>
-                        <Cards/>  
-                      </div> 
-                </div>
-        </section>
+      <h1 class="Lineup_header">
+        LINE-UP <span class="year_header">2024</span>
+      </h1>
+      <section class="about_1-3">
+        <div>
+          <h2 class="dato_header">22.08 THURSDAY</h2>
+        </div>
+        <div class="about_1-1-1">
+          {
+            data.map((liste) => {
+              return <Cards data={liste} />;
+            })
+          }
+          <div>
+            <Cards />
+          </div>
+          <div>
+            <Cards />
+          </div>
+          <div>
+            <Cards />
+          </div>
+          <div>
+            <Cards />
+          </div>
+          <div>
+            <Cards />
+          </div>
+          <div>
+            <Cards />
+          </div>
+        </div>
+      </section>
+      <section class="about_1-3">
+        <div>
+          <h2 class="dato_header_green">23.08 FRIDAY</h2>
+        </div>
+        <div class="about_1-1-1">
+          <div>
+            <Cards />
+          </div>
+          <div>
+            <Cards />
+          </div>
+          <div>
+            <Cards />
+          </div>
+          <div>
+            <Cards />
+          </div>
+          <div>
+            <Cards />
+          </div>
+          <div>
+            <Cards />
+          </div>
+        </div>
+      </section>
+      <section class="about_1-3">
+        <div>
+          <h2 class="dato_header">24.08 SATURDAY</h2>
+        </div>
+        <div class="about_1-1-1">
+          <div>
+            <Cards />
+          </div>
+          <div>
+            <Cards />
+          </div>
+          <div>
+            <Cards />
+          </div>
+          <div>
+            <Cards />
+          </div>
+          <div>
+            <Cards />
+          </div>
+          <div>
+            <Cards />
+          </div>
+        </div>
+      </section>
     </main>
-    <Footer/> 
-    </body>
-  </html>
-  
+    <Footer />
+  </body>
+</html>
