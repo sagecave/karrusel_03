@@ -1,6 +1,7 @@
 ---
 import "../styles/style.css";
 import "../styles/layout.css";
+import Index_card from "../komponenter/Index_card.astro";
 ---
 
 <html lang="en">
@@ -54,13 +55,16 @@ import "../styles/layout.css";
     </div>
     <!-- kort skal placeres her -->
     <div class="box2">
-      <div class="grid-1_1">
+      <div class="grid-1_1_1">
         <div class="textbox">
-          <h1>Buy tickets for Karrusel 2024</h1>
-          <h3>
-            Early Bird Festival Passes on sale until 1 April. <br /> The Festival Pass provides access to <br />all 3 days at Karrusel from 22 to 24 August 2024.<br /> Day tickets will go on sale later.
-          </h3>
+          <Index_card/>  
         </div>
+        <div class="textbox">
+          <Index_card/>  
+        </div>
+        <div class="textbox">
+          <Index_card/>  
+        </div> 
       </div>
     </div>
     <!-- about us infor box-->
