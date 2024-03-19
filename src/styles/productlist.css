@@ -1,17 +1,18 @@
 .about_1-3 {
     display: grid;
-    grid-template-columns: 1fr 3fr;
+    grid-template-columns: 1fr 5fr;
     border: 3px solid #4E14C8;
     width: 100%;
-    margin-bottom: 3rem;
-    gap:5px;
+    gap:1rem;
+    padding-bottom: 4rem;
+    
 }
 
 
 
-.about-1_1_1{
+.about_1-1-1{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(350px,1fr));
 }
 
 .Lineup_header{
@@ -24,18 +25,37 @@
 
 .year_header{
     font-family: "urbanist";
+    margin-bottom: 40px;
     font-size: 40px;
     color: white;
     text-align: center;
+    position: relative;
+    bottom: 4.5rem;
+    right: 4.3rem;
 }
 
 .dato_header{
-    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 60px;
+    font-family:"urbanist";
+    font-size: 50px;
     color:white;
     letter-spacing: 14px; 
     transform: rotate(90deg);
-    margin-top: 35rem;
     position:flex;
-    width:160px
+    width:160px;
+    white-space: nowrap;
+    margin-top: 17rem;
+    margin-bottom: 5rem;
+}
+
+.dato_header_green{
+    font-family:"urbanist";
+    font-size: 50px;
+    color:#29e154;
+    letter-spacing: 14px; 
+    transform: rotate(90deg);
+    position:flex;
+    width:160px;
+    white-space: nowrap;
+    margin-top: 17rem;
+    margin-bottom: 5rem;
 }
