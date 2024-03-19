@@ -17,81 +17,85 @@ import Footer from "../komponenter/Footer.astro";
   </head>
   <body>
     <header>
-      <Ny_nav/> 
-    </header> 
+      <Ny_nav />
+    </header>
     <main>
-    <div class="forside_s1 grid_1-3">
-      <div class="alt_h1">
-        <!-- logo -->
-        <!-- <div class="h1_info">
+      <div class="forside_s1 grid_1-3">
+        <div class="alt_h1">
+          <!-- logo -->
+          <!-- <div class="h1_info">
           <img src="/img/logo.svg" alt="Logo" />
         </div> -->
 
-        <!-- H1 -->
-        <div class="samlet_h1 col_column">
-          <h2 class="h3-vertical"><span class="festival_h2">2024</span></h2>
-          <h3 class="h2-vertical">
-            <span class="festival_h3">22.08 <br /> - <br />24.08</span>
-          </h3>
-          <div class="h1_hele">
-            <h1 class="h1-vertical">
-              <span class="karrusel_h1">KARRUSEL</span>
-              <br /><span class="festival_h2">FESTIVAL</span>
-            </h1>
+          <!-- H1 -->
+          <div class="samlet_h1 col_column">
+            <h2 class="h3-vertical"><span class="festival_h2">2024</span></h2>
+            <h3 class="h2-vertical">
+              <span class="festival_h3">22.08 <br /> - <br />24.08</span>
+            </h3>
+            <div class="h1_hele">
+              <h1 class="h1-vertical">
+                <span class="karrusel_h1">KARRUSEL</span>
+                <br /><span class="festival_h2">FESTIVAL</span>
+              </h1>
+            </div>
           </div>
         </div>
+
+        <!-- første billede -->
+        <div class="img_container">
+          <img src="/img/forside1.jpg" alt="billede på forsiden" />
+        </div>
       </div>
 
-      <!-- første billede -->
-      <div class="img_container">
-        <img src="/img/forside1.jpg" alt="billede på forsiden" />
-      </div>
-    </div>
+      <!-- buy tickets box -->
 
-    <!-- buy tickets box -->
-
-    <div class="box2">
-      <div class="grid-1_1">
-        <div class="textbox">
-          <h1>Buy tickets for Karrusel 2024</h1>
-          <h3>
-            Early Bird Festival Passes on sale until 1 April. <br /> The Festival Pass provides access to <br />all 3 days at Karrusel from 22 to 24 August 2024.<br /> Day tickets will go on sale later.
-          </h3>
+      <div class="box2">
+        <div class="grid-1_1">
+          <div class="textbox">
+            <h1>Buy tickets for Karrusel 2024</h1>
+            <h3>
+              Early Bird Festival Passes on sale until 1 April. <br /> The
+              Festival Pass provides access to <br />all 3 days at Karrusel from
+              22 to 24 August 2024.<br /> Day tickets will go on sale later.
+            </h3>
+          </div>
+          <Knap_product text="Buy ticekts" />
         </div>
         <div class="tickets">
-        <Knap_product text="Buy ticekts"/>
+          <Knap_product text="Buy ticekts" />
+        </div>
       </div>
-    </div>
-    </div>
+    </main>
     <!-- kort skal placeres her -->
     <div class="box2">
       <div class="grid-1_1_1">
         <div class="textbox">
-          <Index_card/>  
+          <Index_card />
         </div>
         <div class="textbox">
-          <Index_card/>  
+          <Index_card />
         </div>
-        <div class="textbox">
-          <Index_card/>  
-        </div> 
       </div>
-    </div>
-    <!-- about us infor box-->
-    <div class="box3">
-      <div class="grid-1_1">
-        <div class="textbox2">
-          <h1>About us</h1>
-          <h3>
-            2024 marks the 5th edition of Karrusel. <br /> Karrusel is a circus themed rave presenting <br />some of the world's leading electronic artists. <br /> Past editions include performances by <br /> Acid Pauli, Amelie Lens, Dixon, FJAAK.
-          </h3>
+      <!-- about us infor box-->
+      <div class="box3">
+        <div class="grid-1_1">
+          <div class="textbox2">
+            <h1>About us</h1>
+            <h3>
+              2024 marks the 5th edition of Karrusel. <br /> Karrusel is a
+              circus themed rave presenting <br />some of the world's leading
+              electronic artists. <br /> Past editions include performances by <br
+              /> Acid Pauli, Amelie Lens, Dixon, FJAAK.
+            </h3>
+          </div>
+          <Knap_product text="Read more" />
         </div>
         <div class="tickets_read">
         <Knap_product text="Read more"/>
       </div>
       </div>
     </div>
-  </main>
-  <Footer/> 
+    <Footer />
   </body>
 </html>
