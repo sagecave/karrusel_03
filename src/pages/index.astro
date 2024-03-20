@@ -53,15 +53,17 @@ import Footer from "../komponenter/Footer.astro";
       <div class="box2">
         <div class="grid-1_1">
           <div class="textbox">
-            <h1>Buy tickets for Karrusel 2024</h1>
-            <h3>
+            <h1 class="box_header">Buy tickets for Karrusel 2024</h1>
+            <h3 class="box_text">
               Early Bird Festival Passes on sale until 1 April. <br /> The
               Festival Pass provides access to <br />all 3 days at Karrusel from
               22 to 24 August 2024.<br /> Day tickets will go on sale later.
             </h3>
           </div>
+          <div class="buy_tickets">
           <Knap_product text="Buy ticekts" />
         </div>
+      </div>
       </div>
 
     <!-- kort skal placeres her -->
@@ -79,24 +81,22 @@ import Footer from "../komponenter/Footer.astro";
       </div>
     </div>
       <!-- about us infor box-->
-      <div class="box3">
-        <div class="grid-1_1">
+      <div>
+        <div class="grid-1_1 box3">
           <div class="textbox2">
-            <h1>About us</h1>
-            <h3>
+            <h1 class="box_header">About us</h1>
+            <h3 class="box_text">
               2024 marks the 5th edition of Karrusel. <br /> Karrusel is a
               circus themed rave presenting <br />some of the world's leading
               electronic artists. <br /> Past editions include performances by <br
               /> Acid Pauli, Amelie Lens, Dixon, FJAAK.
             </h3>
           </div>
-          <Knap_product text="Buy ticekts" />
+          <div class="readmore">
+          <Knap_product text="Read more" />
         </div>
-        <div class="tickets_read">
-        <Knap_product text="Read more"/>
+        </div>
       </div>
-      </div>
-    </div>
     <Footer />
   </body>
 </html>

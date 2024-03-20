@@ -45,6 +45,28 @@ p {
   width: 60px;
 }
 
+.box_header{
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.box_text{
+  margin-top: 1rem;
+}
+
+.buy_tickets{
+  position: relative;
+  left: 3rem;
+  margin-top: 6rem;
+  margin-bottom: 3rem;
+}
+
+.readmore{
+  position: relative;
+  left: 53.9rem;
+  margin-bottom: 3rem;
+}
+
 .box2 {
   position: relative;
   border: 3px solid #4e14c8;
@@ -64,16 +86,18 @@ p {
 .box3 {
   position: relative;
   border: 3px solid #4e14c8;
+ 
 }
 
 .box3::before {
   content: "";
+  position: absolute;
   width: 100%;
   height: 100%;
-  background-image: url("/img/forside4.jpg");
-  opacity: 0.3;
-  z-index: 100;
-  background-image: no-repeat;
+  background-image: url("/img/forside4.png");
+  opacity: 0.3; /* Juster gennemsigtigheden efter behov */
+  z-index: -1; /* Placer pseudo-elementet bag alt andet indhold */
+  background-repeat: no-repeat;
  
 } 
 
