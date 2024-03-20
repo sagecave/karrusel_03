@@ -5,6 +5,7 @@ import "../styles/layout.css";
 import Navigation from "../komponenter/Navigation.astro";
 import Footer from "../komponenter/Footer.astro";
 ---
+
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -14,38 +15,50 @@ import Footer from "../komponenter/Footer.astro";
     <title>Kunstner</title>
   </head>
 
-<body>
+  <body>
     <header>
-    <Navigation/> 
+      <Navigation />
     </header>
     <main>
-        <section class="grid_1-1">
+      <section class="grid_1-1">
         <div>
-            <img src="img/singleview_artist.png" alt="Peggy Gou">
+          <img src="img/singleview_artist.png" alt="Peggy Gou" />
         </div>
         <div>
-            <h1 class="name">PEGGY GOU</h1>
-            <div class="adj">
-              <h3>Fluid Wobbly Techno</h3>
-            
-            </div>
-            <p class="information">Peggy Gou is renowned for her electrifying DJ sets that seamlessly blend diverse genres, captivating audiences worldwide. With her infectious energy and innovative sound, she's a must-see artist for any electronic music enthusiast.</p>
-            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37i9dQZF1DZ06evO1lPLb3?utm_source=generator&theme=0" width="100%" height="510" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+          <h1 class="name">PEGGY GOU</h1>
+          <div class="adj">
+            <h3>Fluid Wobbly Techno</h3>
+          </div>
+          <p class="information">
+            Peggy Gou is renowned for her electrifying DJ sets that seamlessly blend diverse genres, captivating audiences worldwide. With her infectious energy and innovative sound, she's a must-see artist for any electronic music enthusiast.
+          </p>
+          <iframe
+            style="border-radius:12px"
+            src="https://open.spotify.com/embed/playlist/37i9dQZF1DZ06evO1lPLb3?utm_source=generator&theme=0"
+            width="100%"
+            height="510"
+            frameborder="0"
+            allowfullscreen=""
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            loading="lazy"></iframe>
         </div>
-    </section>
-    <details class="scene">
-    <summary>Scene</summary>
+      </section>
+      <details class="scene">
+        <summary>Scene</summary>
         <p>BALKONEN</p>
       </details>
       <details class="tid">
-    <summary>Time</summary>
+        <summary>Time</summary>
         <p>22:30 PM</p>
-        </details>
-          <details class="about">
-    <summary>About the artist</summary>
-        <p>Peggy Gou is a South Korean DJ, singer, songwriter and record producer based in Berlin, Germany. She has released seven EPs on record labels including Ninja Tune and Phonica. In 2019, she launched her own independent record label, Gudu Records.</p>
-            </details>
+      </details>
+      <details class="about">
+        <summary>About the artist</summary>
+        <p>
+          Peggy Gou is a South Korean DJ, singer, songwriter and record producer based in Berlin, Germany. She has released seven EPs on record labels including Ninja Tune and Phonica. In 2019, she launched her own independent record label, Gudu
+          Records.
+        </p>
+      </details>
     </main>
-    <Footer/> 
-</body>
+    <Footer />
+  </body>
 </html>
