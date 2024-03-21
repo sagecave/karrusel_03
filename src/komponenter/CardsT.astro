@@ -2,20 +2,21 @@
 import Knap_product from "../komponenter/Knap_product.astro";
 
 // const { data } = Astro.props;
-const data = await fetch("https://pngxjlkcppmzocuoxmzp.supabase.co/rest/v1/line-up", {
+const cardTu = await fetch("https://pngxjlkcppmzocuoxmzp.supabase.co/rest/v1/line-up", {
   method: "GET",
   headers: {
     apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBuZ3hqbGtjcHBtem9jdW94bXpwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTA0OTAyMDcsImV4cCI6MjAyNjA2NjIwN30.h7sQ7sOC3JXIz9e23g78CYaklpU1I5WyjwVH35CV8FE",
   },
 }).then((res) => res.json());
+console.log(cardTu);
 
 // 'https://pngxjlkcppmzocuoxmzp.supabase.co/rest/v1/line-up'
 // "apikey: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBuZ3hqbGtjcHBtem9jdW94bXpwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTA0OTAyMDcsImV4cCI6MjAyNjA2NjIwN30.h7sQ7sOC3JXIz9e23g78CYaklpU1I5WyjwVH35CV8FE"
 ---
 
 {
-  data
-    .filter((item) => item.dage === "fredag")
+  cardTu
+    .filter((item) => item.dage === "torsdag")
     .map(({ navn, Stikord, dato, tid, scene, beskrivelse, img }) => {
       return (
         <article>
@@ -83,7 +84,7 @@ const data = await fetch("https://pngxjlkcppmzocuoxmzp.supabase.co/rest/v1/line-
   .card img {
     position: relative;
     right: 0.06rem;
-    width: 100%;
+    widows: 100%;
   }
 
   .card-image {

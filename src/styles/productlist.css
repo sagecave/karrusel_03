@@ -1,10 +1,7 @@
 .about_1-3 {
     display: grid;
     grid-template-columns: 1fr 5fr;
-    border: 3px solid #4E14C8;
-    width: 100%;
-    gap:1rem;
-    padding-bottom: 4rem;
+   
     
 }
 
@@ -58,4 +55,11 @@
     white-space: nowrap;
     margin-top: 15rem;
     margin-bottom: 5rem;
+}
+
+section{
+    border: 3px solid #4E14C8;
+    width: 100%;
+    gap:1rem;
+    padding-bottom: 4rem;
 }
