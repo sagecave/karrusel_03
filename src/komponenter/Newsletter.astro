@@ -5,8 +5,9 @@ import "../styles/style.css";
 import "../styles/layout.css";
 ---
 
-<article>
-  <div class="box">
+<article class="article">
+  <div id="box" class="box">
+    <span class="close">&times;</span>
     <h1>Sign-up for our <br /> newsletter!</h1>
 
     <p>
@@ -25,6 +26,7 @@ import "../styles/layout.css";
       <summary>E-mail</summary>
       <p>E-mail</p>
     </details>
+    <!-- I am assuming this is a placeholder, adjust according to your framework -->
     <Knap_product text="Sign up" />
 
     <img src="img/logo.svg" alt="logo" />
@@ -54,22 +56,22 @@ import "../styles/layout.css";
     padding: 15px;
   }
 
-  /* klasser  */
   /* navn */
   .navn summary {
     cursor: pointer;
     display: flex;
-    justify-content: space-between; /* Placerer indholdet i summary i begge ender */
-    align-items: center; /* Centrerer indholdet lodret */
+    justify-content: space-between;
+    align-items: center;
     box-sizing: border-box;
     border: 1px solid #4e14c8;
   }
 
   .navn summary:after {
-    content: "\25B8"; /* Unicode pil til højre */
-    transform: rotate(90deg); /* Drej pilen 90 grader */
-    width: 12px; /* Juster bredden efter behov */
-    height: 12px; /* Juster højden efter behov */
+    content: "\25B8";
+    transform: rotate(90deg);
+    width: 12px;
+    height: 12px;
+    color: #4e14c8;
   }
 
   /* mail */
@@ -77,18 +79,21 @@ import "../styles/layout.css";
   .mail summary {
     cursor: pointer;
     display: flex;
-    justify-content: space-between; /* Placerer indholdet i summary i begge ender */
-    align-items: center; /* Centrerer indholdet lodret */
+    justify-content: space-between;
+    align-items: center;
     box-sizing: border-box;
     border: 0.5px solid #4e14c8;
   }
 
   .mail summary:after {
     content: "\25B8"; /* Unicode pil til højre */
-    transform: rotate(90deg); /* Drej pilen 90 grader */
-    width: 12px; /* Juster bredden efter behov */
-    height: 12px; /* Juster højden efter behov */
+    transform: rotate(90deg);
+    width: 12px;
+    height: 12px;
+    color: #4e14c8;
   }
+
+  /* tekst */
 
   p {
     text-align: start;
@@ -101,4 +106,33 @@ import "../styles/layout.css";
     text-align: center;
     color: #4e14c8;
   }
+
+  /* kryds */
+
+  .close {
+    float: right;
+    font-size: 25px;
+    font-weight: lighter;
+    cursor: pointer;
+    margin-right: 7px;
+    color: #4e14c8;
+  }
+
+  .close:hover {
+    color: rgb(244, 247, 248);
+  }
 </style>
+
+<!-- javascript med lukkefunktion -->
+
+<script>
+  // Henter krydset og boksen
+  var closeBtn = document.querySelector(".close");
+  var box = document.getElementById("box");
+
+  // Tilføjer en eventlistener til krydset
+  closeBtn.addEventListener("click", function () {
+    // Fjerner boksen fra DOM'en ved at skjule den
+    box.style.display = "none";
+  });
+</script>
