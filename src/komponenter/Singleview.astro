@@ -1,0 +1,56 @@
+---
+import Navigation from "../komponenter/Navigation.astro";
+import Footer from "../komponenter/Footer.astro";
+const single = await fetch("https://pngxjlkcppmzocuoxmzp.supabase.co/rest/v1/line-up", {
+  method: "GET",
+  headers: {
+    apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBuZ3hqbGtjcHBtem9jdW94bXpwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTA0OTAyMDcsImV4cCI6MjAyNjA2NjIwN30.h7sQ7sOC3JXIz9e23g78CYaklpU1I5WyjwVH35CV8FE",
+  },
+}).then((res) => res.json());
+---
+
+{
+  single.map(({ navn, Stikord, Spotify, tid, scene, beskrivelse, img }) => {
+    return (
+      <>
+        <header>
+          <Navigation />
+        </header>
+        <main>
+          <section class="grid_1-1">
+            <div>
+              <img class="kunster_pic" src={`../${img}`} alt="Peggy Gou" />
+            </div>
+            <div>
+              <h1 class="name">{navn}</h1>
+              <div class="adj">
+                <h3>{Stikord}</h3>
+              </div>
+              <p class="information">{beskrivelse}</p>
+              <iframe style="border-radius:12px" src={Spotify} width="100%" height="510" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" />
+            </div>
+          </section>
+          <details class="scene">
+            <summary>Scene</summary>
+            <p>{scene}</p>
+          </details>
+          <details class="tid">
+            <summary>Time</summary>
+            <p>{tid}</p>
+          </details>
+          <details class="about">
+            <summary>About the artist</summary>
+            <p>{beskrivelse}</p>
+          </details>
+        </main>
+        <Footer />
+      </>
+    );
+  })
+}
+
+<style>
+  .kunster_pic {
+    height: 100%;
+  }
+</style>

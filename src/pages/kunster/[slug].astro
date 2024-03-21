@@ -1,0 +1,76 @@
+---
+import "../../styles/singleview.css";
+import "../../styles/style.css";
+import "../../styles/layout.css";
+import Singleviewe from "../../komponenter/Singleview.astro";
+import Navigation from "../../komponenter/Navigation.astro";
+import Footer from "../../komponenter/Footer.astro";
+
+export async function getStaticPaths() {
+  const data = await fetch("https://pngxjlkcppmzocuoxmzp.supabase.co/rest/v1/line-up", {
+    method: "GET",
+    headers: {
+      apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBuZ3hqbGtjcHBtem9jdW94bXpwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTA0OTAyMDcsImV4cCI6MjAyNjA2NjIwN30.h7sQ7sOC3JXIz9e23g78CYaklpU1I5WyjwVH35CV8FE",
+    },
+  }).then((response) => response.json());
+
+  return data.map((kunster) => {
+    return {
+      params: { slug: kunster.slug },
+      props: { kunster },
+    };
+  });
+}
+
+const { kunster } = Astro.props;
+console.log(kunster);
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Kunstner</title>
+  </head>
+
+  <body>
+    <header>
+      <Navigation />
+    </header>
+    <main>
+      <section class="grid_1-1">
+        <div>
+          <img src={`../${kunster.img}`} alt="Peggy Gou" />
+        </div>
+        <div>
+          <h1 class="name">{kunster.navn}</h1>
+          <div class="adj">
+            <h3>{kunster.Stikord}</h3>
+          </div>
+          <p class="information">{kunster.beskrivelse}</p>
+          <iframe style="border-radius:12px" src={kunster.Spotify} width="100%" height="510" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        </div>
+      </section>
+      <details class="scene">
+        <summary>Scene</summary>
+        <p>{kunster.scene}</p>
+      </details>
+      <details class="tid">
+        <summary>Time</summary>
+        <p>{kunster.tid}</p>
+      </details>
+      <details class="about">
+        <summary>About the artist</summary>
+        <p>{kunster.beskrivelse}</p>
+      </details>
+    </main>
+    <Footer />
+  </body>
+</html>
+<style>
+  div img {
+    height: 109%;
+  }
+</style>

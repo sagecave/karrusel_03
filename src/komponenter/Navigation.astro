@@ -2,46 +2,44 @@
 import Knap from "../komponenter/Knap.astro";
 ---
 
-
 <header>
-    <div class="logo">
-        <a href="src/pages/index.astro"><img src="img/nav_logo.png" alt="logo"></a>
-    </div>
-    <nav>
-        <ul class="menu">
-            <li><a href="src/pages/index.astro">Home</a></li>
-            <li><a href="src/pages/singleview.astro">Line up</a></li>
-            <li><a href="src/pages/map.astro">Map</a></li>
-            <li><a href="src/pages/about_us.astro">About us</a></li>
-            <li><Knap text="Buy tickets"/></li>
-        </div>
-        </ul>
-        <div class="burger">
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
-        </div>
-    </nav>
+  <div class="logo">
+    <a href="/"><img src="../img/nav_logo.png" alt="logo" /></a>
+  </div>
+  <nav>
+    <ul class="menu">
+      <li><a href="/">Home</a></li>
+      <li><a href="/productlist">Line up</a></li>
+      <li><a href="/map">Map</a></li>
+      <li><a href="/about_us">About us</a></li>
+      <li><Knap text="Buy tickets" /></li>
+    </ul>
+  </nav>
+  <div class="burger">
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+  </div>
 </header>
 
 <style>
-    .menu {
+  .menu {
     display: flex;
     z-index: 11;
     list-style: none;
     margin: 0;
     padding: 0;
-    }
-          
-.menu li {
+  }
+
+  .menu li {
     margin-right: 5px;
-    }
-          
-.menu li:last-child {
+  }
+
+  .menu li:last-child {
     margin-right: 0;
-    }
-          
-.menu a {
+  }
+
+  .menu a {
     display: block;
     padding: 31px;
     color: white;
@@ -52,94 +50,94 @@ import Knap from "../komponenter/Knap.astro";
     margin-right: 45px;
     font-family: "urbanist";
     z-index: 11;
-    }
-          
-.menu a:hover {
+  }
+
+  .menu a:hover {
     color: white;
-        }
-          
-.burger {
+  }
+
+  .burger {
     width: 30px;
     height: 20px;
     cursor: pointer;
-    }
-          
-.burger .line {
+  }
+
+  .burger .line {
     width: 100%;
     height: 2px;
     background-color: #333;
     margin-bottom: 5px;
     transition: 0.2s linear;
-    }
-.burger {
+  }
+  .burger {
     display: none;
-        }
-@media screen and (max-width: 800px) {
+  }
+  @media screen and (max-width: 800px) {
     .menu {
-    display: none;
+      display: none;
     }
-.burger {
-    display: block;
+    .burger {
+      display: block;
     }
-.burger.active .line:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
-    transition: 0.2s linear;
-    }
-          
-.burger.active .line:nth-child(2) {
-    opacity: 0;
-    transition: 0.15s linear;
-    }
-          
-.burger.active .line:nth-child(3) {
-    transform: rotate(-45deg) translate(5px, -5px);
-    transition: 0.2s linear;
-    }
-          
-nav.active .menu {
-    display: block;
-    background-color:#ECE6DB;
-    position:fixed;
-    top: 120px;
-    left: 0;
-    width: 100%;
-    z-index: 1;
-    }
-          
-nav.active .menu li {
-    margin: 10px 20px;
-        }
-          
-nav.active .menu a {
-    font-size: 16px;
-        }
-    }
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items:end;
-    margin-top: -25px;
-    z-index: 4;
-    }
-          
-nav {
-    display: flex;
-    align-items: center;
+    .burger.active .line:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+      transition: 0.2s linear;
     }
 
-.logo{
+    .burger.active .line:nth-child(2) {
+      opacity: 0;
+      transition: 0.15s linear;
+    }
+
+    .burger.active .line:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -5px);
+      transition: 0.2s linear;
+    }
+
+    nav.active .menu {
+      display: block;
+      background-color: #ece6db;
+      position: fixed;
+      top: 120px;
+      left: 0;
+      width: 100%;
+      z-index: 1;
+    }
+
+    nav.active .menu li {
+      margin: 10px 20px;
+    }
+
+    nav.active .menu a {
+      font-size: 16px;
+    }
+  }
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin-top: -25px;
+    z-index: 4;
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+  }
+
+  .logo {
     padding: 30px 10px;
     margin: 0.5rem;
     margin-bottom: 1.3rem;
     width: 8rem;
     z-index: 2;
     background-color: transparent;
-}
+  }
 
-.buy-tickets {
-    background-image: linear-gradient(45deg, #68DA23, #E9F4E2);
+  .buy-tickets {
+    background-image: linear-gradient(45deg, #68da23, #e9f4e2);
     border-radius: 10px;
-    z-index: 10; 
+    z-index: 10;
     display: block;
     padding: 31px;
     color: white;
@@ -149,5 +147,5 @@ nav {
     margin-top: 30px;
     margin-right: 45px;
     font-family: "urbanist";
-}
+  }
 </style>

@@ -16,7 +16,7 @@ const data = await fetch("https://pngxjlkcppmzocuoxmzp.supabase.co/rest/v1/line-
 {
   data
     .filter((item) => item.dage === "fredag")
-    .map(({ navn, Stikord, dato, tid, scene, beskrivelse, img }) => {
+    .map(({ navn, Stikord, dato, tid, scene, beskrivelse, img, slug }) => {
       return (
         <article>
           <div class="green-box">
@@ -32,7 +32,9 @@ const data = await fetch("https://pngxjlkcppmzocuoxmzp.supabase.co/rest/v1/line-
                 <p class="card-venue">{scene}</p>
               </div>
               <p class="card-description">{beskrivelse}</p>
-              <Knap_product text="Read more" />
+              <a href={`kunster/${slug}`}>
+                <Knap_product text="Read more" />
+              </a>
             </div>
           </div>
         </article>

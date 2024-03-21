@@ -1,145 +1,161 @@
 ---
 import Knap from "../komponenter/Knap.astro";
 ---
+
 <footer>
-    <section class="grid_1-1-1-1">
-        <div class="footer.1">
-            <h3 class="header_footer">Newsletter</h3>
-            <form class="email-form">
-                <input type="email" id="email" name="email" placeholder="Indtast din e-mailadresse" required>
-                
-            </form>
-            <div class="KnapFooter">
-            <Knap text="Sign up"/>
-        </div>
-        </div>
-        <div class="footer.2">
-          <h3 class="header_footer">Contact us</h3>
-          <ul class="footer_ul"
-            <li><p>KARRUSELFESTIVAL.COM</p></li>
-            <li><p>2300, COPENHAGEN </p></li>
-            <li><p>+45 55 67 38 54</p></li>
-        </ul>
-        </div>
-        <div class="footer.3">
-          <h3 class="header_footer">Thanks to</h3>
-          <ul class="footer_ul">
-            <li><p>Heineken Silver</p></li>
-            <li><p>Refshaleøen</p></li>
-        </ul>
-        </div>
-        <div class="footer.4">
-            <a href="index.html">
-          <img id="footer_img" src="img/footer.png" alt="Karrusel Festival logo">
-        </a>
-        </div>
-      </section>
+  <section class="grid_1-1-1-1">
+    <div class="footer.1">
+      <h3 class="header_footer">Newsletter</h3>
+      <form class="email-form">
+        <input type="email" id="email" name="email" placeholder="Indtast din e-mailadresse" required />
+      </form>
+      <div class="KnapFooter">
+        <Knap text="Sign up" />
+      </div>
+    </div>
+    <div class="footer.2">
+      <h3 class="header_footer">Contact us</h3>
+      <ul class="footer_ul">
+        <li><p>KARRUSELFESTIVAL.COM</p></li>
+        <li><p>2300, COPENHAGEN</p></li>
+        <li><p>+45 55 67 38 54</p></li>
+      </ul>
+    </div>
+
+    <div class="footer.3">
+      <h3 class="header_footer">Thanks to</h3>
+      <ul class="footer_ul">
+        <li><p>Heineken Silver</p></li>
+        <li><p>Refshaleøen</p></li>
+      </ul>
+    </div>
+    <div class="footer.4">
+      <a href="index.html">
+        <img id="footer_img" src="../img/footer.png" alt="Karrusel Festival logo" />
+      </a>
+    </div>
+  </section>
 </footer>
 
-
 <style>
-
-.grid_1-1-1-1 {
+  .grid_1-1-1-1 {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 40px;
     width: auto;
     margin-top: 40px;
     margin-bottom: 1rem;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family:
+      system-ui,
+      -apple-system,
+      BlinkMacSystemFont,
+      "Segoe UI",
+      Roboto,
+      Oxygen,
+      Ubuntu,
+      Cantarell,
+      "Open Sans",
+      "Helvetica Neue",
+      sans-serif;
     list-style: none;
     color: white;
     background-color: #140345;
-}
-@media (max-width: 600px) {
-    .grid_1-1-1-1{
-        display: grid;
-        grid-template-columns: 1fr;
-        column-gap: 1em;
+  }
+  @media (max-width: 600px) {
+    .grid_1-1-1-1 {
+      display: grid;
+      grid-template-columns: 1fr;
+      column-gap: 1em;
     }
-}
+  }
 
-.footer1 {
+  .footer1 {
     bottom: 30px;
     margin-top: 30px;
     display: grid;
     grid-row: 4/4;
     grid-column: 1/4;
     text-decoration: none;
-}
+  }
 
-.footer2 {
+  .footer2 {
     bottom: 30px;
     margin-top: 10px;
     display: grid;
     grid-row: 4/3;
     grid-column: 2/4;
     text-decoration: none;
-}
+  }
 
-.footer3 {
+  .footer3 {
     bottom: 30px;
     margin-top: 10px;
     display: grid;
     grid-row: 4/2;
     grid-column: 3/4;
     text-decoration: none;
-}
+  }
 
-.footer4 {
+  .footer4 {
     bottom: 30px;
     margin-top: 10px;
     display: grid;
     grid-row: 4/1;
     grid-column: 4/4;
     text-decoration: none;
-}
+  }
 
-#footer_img {
-margin-top: 1rem;
-margin-bottom: 1rem;
-margin-left: 6rem;
-   width: 40%;
-}
+  #footer_img {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-left: 6rem;
+    width: 40%;
+  }
 
-.footer_ul{
+  .footer_ul {
     text-align: left;
     font-family: "urbanist";
     font-size: 14px;
     margin-left: 3.5rem;
     color: white;
     margin-top: 2rem;
-}
-li {
+  }
+  li {
     list-style: none;
+  }
+
+  p {
     margin-top: 0.8rem;
-    margin-bottom: 08.rem;
-}
+  }
 
-p {
-    margin-top: 0.8rem;
-}
+  .menu a {
+    font-family:
+      system-ui,
+      -apple-system,
+      BlinkMacSystemFont,
+      "Segoe UI",
+      Roboto,
+      Oxygen,
+      Ubuntu,
+      Cantarell,
+      "Open Sans",
+      "Helvetica Neue",
+      sans-serif;
+  }
 
-.menu a{
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-
-
-
-
-.email-form {
+  .email-form {
     max-width: 300px;
-    margin:0.2rem;
-    text-align:left;
+    margin: 0.2rem;
+    text-align: left;
     margin-bottom: 2rem;
-}
+  }
 
-label {
+  label {
     display: block;
     margin-bottom: 5px;
-}
+  }
 
-input[type="email"] {
+  input[type="email"] {
     width: 100%;
     padding: 15px;
     margin-top: 2rem;
@@ -148,29 +164,27 @@ input[type="email"] {
     box-sizing: border-box;
     border: 1px solid #60c480;
     background-color: white;
-}
-.KnapFooter{
+  }
+  .KnapFooter {
     margin-left: 4rem;
-   height: 30px;
-   margin-top:-2rem;
-}
+    height: 30px;
+    margin-top: -2rem;
+  }
 
-button:hover {
+  button:hover {
     background-color: #0056b3;
-}
+  }
 
-.header_footer{
+  .header_footer {
     margin-left: 4rem;
     font-family: "urbanist";
     font-size: 20px;
     text-align: left;
-    color:white;
-}
+    color: white;
+  }
 
-ul p{
+  ul p {
     font-size: 13px;
     padding: 0.4rem;
-}
-
-
+  }
 </style>
