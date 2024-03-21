@@ -1,0 +1,104 @@
+---
+import Knap_product from "../komponenter/Knap_product.astro";
+import "../styles/singleview.css";
+import "../styles/style.css";
+import "../styles/layout.css";
+---
+
+<article>
+  <div class="box">
+    <h1>Sign-up for our <br /> newsletter!</h1>
+
+    <p>
+      Sign up for our newsletter to stay tuned with the program
+      <br />lineup and the most exciting artists!
+      <br />Dive into the electronic beats and events
+      <br />straight to your inbox.
+    </p>
+
+    <details class="navn">
+      <summary>Name</summary>
+      <p>Name:</p>
+    </details>
+
+    <details class="mail">
+      <summary>E-mail</summary>
+      <p>E-mail</p>
+    </details>
+    <Knap_product text="Sign up" />
+
+    <img src="img/logo.svg" alt="logo" />
+  </div>
+</article>
+
+<style>
+  .article {
+    align-items: center;
+  }
+
+  /* farver */
+  .box {
+    background-color: #29e154;
+    font-family: "urbanist";
+    box-sizing: border-box;
+    border: 3px solid #4e14c8;
+    width: 60%;
+  }
+
+  summary {
+    color: #f3f0f9;
+    font-size: 30px;
+    border-radius: 2px solid #4e14c8;
+    background-color: #29e154;
+    font-size: 20px;
+    padding: 15px;
+  }
+
+  /* klasser  */
+  /* navn */
+  .navn summary {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between; /* Placerer indholdet i summary i begge ender */
+    align-items: center; /* Centrerer indholdet lodret */
+    box-sizing: border-box;
+    border: 1px solid #4e14c8;
+  }
+
+  .navn summary:after {
+    content: "\25B8"; /* Unicode pil til højre */
+    transform: rotate(90deg); /* Drej pilen 90 grader */
+    width: 12px; /* Juster bredden efter behov */
+    height: 12px; /* Juster højden efter behov */
+  }
+
+  /* mail */
+
+  .mail summary {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between; /* Placerer indholdet i summary i begge ender */
+    align-items: center; /* Centrerer indholdet lodret */
+    box-sizing: border-box;
+    border: 0.5px solid #4e14c8;
+  }
+
+  .mail summary:after {
+    content: "\25B8"; /* Unicode pil til højre */
+    transform: rotate(90deg); /* Drej pilen 90 grader */
+    width: 12px; /* Juster bredden efter behov */
+    height: 12px; /* Juster højden efter behov */
+  }
+
+  p {
+    text-align: start;
+    color: #f5f5f5;
+    margin-left: 20px;
+    line-height: 25px;
+  }
+
+  h1 {
+    text-align: center;
+    color: #4e14c8;
+  }
+</style>
